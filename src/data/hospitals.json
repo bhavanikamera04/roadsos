@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Yashoda Hospital, Secunderabad",
+    "lat": 17.4441,
+    "lon": 78.4983,
+    "trauma_score": 0.95,
+    "has_icu": true,
+    "is_24hr": true,
+    "level": 3,
+    "specialty": "Level 3 trauma, neurosurgery, burns, ICU",
+    "phone": "04067191919"
+  },
+  {
+    "id": 2,
+    "name": "Apollo Hospital, Jubilee Hills",
+    "lat": 17.4317,
+    "lon": 78.4081,
+    "trauma_score": 0.92,
+    "has_icu": true,
+    "is_24hr": true,
+    "level": 3,
+    "specialty": "Level 3 trauma, cardiac, neurology",
+    "phone": "04023607777"
+  },
+  {
+    "id": 3,
+    "name": "Care Hospital, Banjara Hills",
+    "lat": 17.4126,
+    "lon": 78.4483,
+    "trauma_score": 0.80,
+    "has_icu": true,
+    "is_24hr": true,
+    "level": 2,
+    "specialty": "Level 2 trauma, ortho, surgery",
+    "phone": "04030418888"
+  },
+  {
+    "id": 4,
+    "name": "Government General Hospital",
+    "lat": 17.3850,
+    "lon": 78.4867,
+    "trauma_score": 0.70,
+    "has_icu": true,
+    "is_24hr": true,
+    "level": 2,
+    "specialty": "Government trauma centre, free treatment",
+    "phone": "04024600700"
+  },
+  {
+    "id": 5,
+    "name": "Shadnagar Primary Health Centre",
+    "lat": 17.0693,
+    "lon": 78.2059,
+    "trauma_score": 0.15,
+    "has_icu": false,
+    "is_24hr": false,
+    "level": 1,
+    "specialty": "Primary care only, no emergency surgery",
+    "phone": "08418222222"
+  },
+  {
+    "id": 6,
+    "name": "NIMS Hospital, Punjagutta",
+    "lat": 17.4255,
+    "lon": 78.4483,
+    "trauma_score": 0.88,
+    "has_icu": true,
+    "is_24hr": true,
+    "level": 3,
+    "specialty": "Neurosciences, trauma, ICU, government",
+    "phone": "04023489000"
+  }
+]
