@@ -9,7 +9,8 @@
     "is_24hr": true,
     "level": 3,
     "specialty": "Level 3 trauma, neurosurgery, burns, ICU",
-    "phone": "04067191919"
+    "phone": "04067191919",
+    "type": "hospital"
   },
   {
     "id": 2,
@@ -21,7 +22,8 @@
     "is_24hr": true,
     "level": 3,
     "specialty": "Level 3 trauma, cardiac, neurology",
-    "phone": "04023607777"
+    "phone": "04023607777",
+    "type": "hospital"
   },
   {
     "id": 3,
@@ -33,7 +35,8 @@
     "is_24hr": true,
     "level": 2,
     "specialty": "Level 2 trauma, ortho, surgery",
-    "phone": "04030418888"
+    "phone": "04030418888",
+    "type": "hospital"
   },
   {
     "id": 4,
@@ -45,7 +48,8 @@
     "is_24hr": true,
     "level": 2,
     "specialty": "Government trauma centre, free treatment",
-    "phone": "04024600700"
+    "phone": "04024600700",
+    "type": "hospital"
   },
   {
     "id": 5,
@@ -57,7 +61,8 @@
     "is_24hr": false,
     "level": 1,
     "specialty": "Primary care only, no emergency surgery",
-    "phone": "08418222222"
+    "phone": "08418222222",
+    "type": "hospital"
   },
   {
     "id": 6,
@@ -69,6 +74,306 @@
     "is_24hr": true,
     "level": 3,
     "specialty": "Neurosciences, trauma, ICU, government",
-    "phone": "04023489000"
+    "phone": "04023489000",
+    "type": "hospital"
+  },
+  {
+    "id": 7,
+    "name": "Apollo Hospital, Hydernagar",
+    "lat": 17.4941,
+    "lon": 78.4032,
+    "trauma_score": 0.90,
+    "has_icu": true,
+    "is_24hr": true,
+    "level": 3,
+    "specialty": "Level 3 trauma, cardiac, multi-speciality",
+    "phone": "04023607777",
+    "type": "hospital"
+  },
+  {
+    "id": 8,
+    "name": "KIMS Hospital, Secunderabad",
+    "lat": 17.4373,
+    "lon": 78.4827,
+    "trauma_score": 0.88,
+    "has_icu": true,
+    "is_24hr": true,
+    "level": 3,
+    "specialty": "Level 3 trauma, ortho, neurology, ICU",
+    "phone": "04044885000",
+    "type": "hospital"
+  },
+  {
+    "id": 9,
+    "name": "KIMS Hospital, Kondapur",
+    "lat": 17.4203,
+    "lon": 78.3852,
+    "trauma_score": 0.85,
+    "has_icu": true,
+    "is_24hr": true,
+    "level": 3,
+    "specialty": "Multi-speciality, trauma, ICU",
+    "phone": "04044885000",
+    "type": "hospital"
+  },
+  {
+    "id": 10,
+    "name": "Citizens Specialty Hospital, Nallagandla",
+    "lat": 17.4708,
+    "lon": 78.3113,
+    "trauma_score": 0.82,
+    "has_icu": true,
+    "is_24hr": true,
+    "level": 3,
+    "specialty": "Multi-speciality, emergency, ICU",
+    "phone": "04067241919",
+    "type": "hospital"
+  },
+  {
+    "id": 11,
+    "name": "Sunshine Hospital, Begumpet",
+    "lat": 17.4412,
+    "lon": 78.4868,
+    "trauma_score": 0.83,
+    "has_icu": true,
+    "is_24hr": true,
+    "level": 3,
+    "specialty": "Trauma, ortho, emergency surgery",
+    "phone": "04027890000",
+    "type": "hospital"
+  },
+  {
+    "id": 12,
+    "name": "Osmania General Hospital",
+    "lat": 17.3792,
+    "lon": 78.4742,
+    "trauma_score": 0.85,
+    "has_icu": true,
+    "is_24hr": true,
+    "level": 3,
+    "specialty": "Government Level 3 trauma, free treatment, burns",
+    "phone": "04024600199",
+    "type": "hospital"
+  },
+  {
+    "id": 13,
+    "name": "Kothur Government Hospital",
+    "lat": 17.0534,
+    "lon": 78.2478,
+    "trauma_score": 0.35,
+    "has_icu": false,
+    "is_24hr": false,
+    "level": 1,
+    "specialty": "Basic emergency, limited facilities",
+    "phone": "08418220100",
+    "type": "hospital"
+  },
+  {
+    "id": 14,
+    "name": "Maheshwara Hospital, Isnapur NH-65",
+    "lat": 17.5156,
+    "lon": 78.2658,
+    "trauma_score": 0.45,
+    "has_icu": false,
+    "is_24hr": true,
+    "level": 1,
+    "specialty": "Basic emergency, highway access",
+    "phone": "09848098480",
+    "type": "hospital"
+  },
+  {
+    "id": 15,
+    "name": "Medicover Hospital, Hitec City",
+    "lat": 17.4486,
+    "lon": 78.3762,
+    "trauma_score": 0.84,
+    "has_icu": true,
+    "is_24hr": true,
+    "level": 3,
+    "specialty": "Multi-speciality, trauma, cardiac ICU",
+    "phone": "04067898989",
+    "type": "hospital"
+  },
+  {
+    "id": 16,
+    "name": "Star Hospital, Banjara Hills",
+    "lat": 17.4162,
+    "lon": 78.4392,
+    "trauma_score": 0.80,
+    "has_icu": true,
+    "is_24hr": true,
+    "level": 2,
+    "specialty": "Emergency, cardiac, trauma surgery",
+    "phone": "04044777777",
+    "type": "hospital"
+  },
+  {
+    "id": 17,
+    "name": "Niloufer Hospital (Children)",
+    "lat": 17.3967,
+    "lon": 78.4714,
+    "trauma_score": 0.65,
+    "has_icu": true,
+    "is_24hr": true,
+    "level": 2,
+    "specialty": "Government paediatric emergency, free",
+    "phone": "04023314649",
+    "type": "hospital"
+  },
+  {
+    "id": 18,
+    "name": "Raichur Institute of Medical Sciences",
+    "lat": 16.2120,
+    "lon": 77.3560,
+    "trauma_score": 0.72,
+    "has_icu": true,
+    "is_24hr": true,
+    "level": 2,
+    "specialty": "Government trauma, serves NH-50 corridor",
+    "phone": "08532226820",
+    "type": "hospital"
+  },
+  {
+    "id": 19,
+    "name": "Wockhardt Hospital, Mumbai",
+    "lat": 19.0176,
+    "lon": 72.8561,
+    "trauma_score": 0.90,
+    "has_icu": true,
+    "is_24hr": true,
+    "level": 3,
+    "specialty": "Level 3 trauma, cardiac, neuro ICU",
+    "phone": "02226558000",
+    "type": "hospital"
+  },
+  {
+    "id": 20,
+    "name": "Rashid Hospital, Dubai",
+    "lat": 25.2285,
+    "lon": 55.3273,
+    "trauma_score": 0.95,
+    "has_icu": true,
+    "is_24hr": true,
+    "level": 3,
+    "specialty": "Level 1 trauma UAE, government, free for emergencies",
+    "phone": "+97143371111",
+    "type": "hospital"
+  },
+  {
+    "id": 21,
+    "name": "Shadnagar Police Station",
+    "lat": 17.0695,
+    "lon": 78.2063,
+    "trauma_score": 0,
+    "has_icu": false,
+    "is_24hr": true,
+    "level": 0,
+    "specialty": "Highway patrol, accident response, NH-65",
+    "phone": "08418220033",
+    "type": "police"
+  },
+  {
+    "id": 22,
+    "name": "Kothur Police Station",
+    "lat": 17.0534,
+    "lon": 78.2478,
+    "trauma_score": 0,
+    "has_icu": false,
+    "is_24hr": true,
+    "level": 0,
+    "specialty": "Local police, accident first response",
+    "phone": "08418220044",
+    "type": "police"
+  },
+  {
+    "id": 23,
+    "name": "Hyderabad Traffic Police Control",
+    "lat": 17.3850,
+    "lon": 78.4867,
+    "trauma_score": 0,
+    "has_icu": false,
+    "is_24hr": true,
+    "level": 0,
+    "specialty": "City traffic control, accident coordination",
+    "phone": "04027852485",
+    "type": "police"
+  },
+  {
+    "id": 24,
+    "name": "EMRI 108 Ambulance Service",
+    "lat": 17.3850,
+    "lon": 78.4867,
+    "trauma_score": 0,
+    "has_icu": false,
+    "is_24hr": true,
+    "level": 0,
+    "specialty": "Government emergency ambulance, free service",
+    "phone": "108",
+    "type": "ambulance"
+  },
+  {
+    "id": 25,
+    "name": "Ziqitza Ambulance 1950",
+    "lat": 17.3850,
+    "lon": 78.4867,
+    "trauma_score": 0,
+    "has_icu": false,
+    "is_24hr": true,
+    "level": 0,
+    "specialty": "National ambulance helpline, ICU ambulances",
+    "phone": "1950",
+    "type": "ambulance"
+  },
+  {
+    "id": 26,
+    "name": "NHAI Highway Emergency NH-65",
+    "lat": 17.0693,
+    "lon": 78.2059,
+    "trauma_score": 0,
+    "has_icu": false,
+    "is_24hr": true,
+    "level": 0,
+    "specialty": "Highway towing, rescue, free on NHAI roads",
+    "phone": "1033",
+    "type": "towing"
+  },
+  {
+    "id": 27,
+    "name": "Shadnagar Vehicle Recovery",
+    "lat": 17.0710,
+    "lon": 78.2080,
+    "trauma_score": 0,
+    "has_icu": false,
+    "is_24hr": true,
+    "level": 0,
+    "specialty": "24hr towing, highway vehicle recovery",
+    "phone": "09848012345",
+    "type": "towing"
+  },
+  {
+    "id": 28,
+    "name": "NH-65 Tyre Service, Kothur",
+    "lat": 17.0540,
+    "lon": 78.2480,
+    "trauma_score": 0,
+    "has_icu": false,
+    "is_24hr": false,
+    "level": 0,
+    "specialty": "Tyre repair, puncture, all vehicles",
+    "phone": "09876541234",
+    "type": "puncture"
+  },
+  {
+    "id": 29,
+    "name": "Shadnagar Tyre Works",
+    "lat": 17.0700,
+    "lon": 78.2070,
+    "trauma_score": 0,
+    "has_icu": false,
+    "is_24hr": false,
+    "level": 0,
+    "specialty": "All vehicle tyre service, highway",
+    "phone": "09123456789",
+    "type": "puncture"
   }
 ]

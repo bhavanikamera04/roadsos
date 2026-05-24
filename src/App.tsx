@@ -1,9 +1,9 @@
 import { useHospitals } from './hooks/useHospitals'
 import { useSensor } from './hooks/useSensor'
 import { useEmergency } from './hooks/useEmergency'
-import { HospitalCard } from './components/HospitalCard'
 import { ContactSetup } from './components/ContactSetup'
 import { useEffect, useState } from 'react'
+import { EmergencyTabs } from './components/EmergencyTabs'
 
 function App() {
   const { ranked, locationError } = useHospitals('HIGH')
@@ -209,6 +209,50 @@ function App() {
           AI EMERGENCY RESPONSE
         </p>
       </div>
+      {/* Header */}
+
+      <div style={{
+        background: '#111',
+        border: '1px solid #222',
+        borderRadius: '10px',
+        padding: '12px 14px',
+        marginBottom: '20px',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '12px'
+}}>
+  <div style={{ fontSize: '28px' }}>📱</div>
+  <div>
+    <p style={{ fontSize: '12px', fontWeight: '600', color: '#aaa', margin: '0 0 2px', letterSpacing: '0.06em' }}>
+      BYSTANDER MODE
+    </p>
+    <p style={{ fontSize: '11px', color: '#555', margin: 0 }}>
+      Share at accident scenes — no install needed
+    </p>
+    <p style={{ fontSize: '11px', color: '#22c55e', margin: '2px 0 0', fontFamily: 'monospace' }}>
+      roadsos.vercel.app/bystander
+    </p>
+  </div>
+  <button
+    onClick={() => window.open('/bystander', '_blank')}
+    style={{
+      marginLeft: 'auto',
+      padding: '6px 12px',
+      background: '#1a2a1a',
+      border: '1px solid #22c55e',
+      color: '#22c55e',
+      borderRadius: '6px',
+      fontSize: '11px',
+      fontWeight: '600',
+      cursor: 'pointer',
+      whiteSpace: 'nowrap'
+    }}
+  >
+    OPEN
+  </button>
+</div>
+
+{/* REST OF YOUR APP continues here — SOS button, crash score, etc. */}
 
       {isMonitoring && (
         <div style={{
@@ -359,11 +403,8 @@ function App() {
       {ranked.length === 0 ? (
         <p style={{ color: '#555', fontSize: '13px' }}>Getting your location...</p>
       ) : (
-        ranked.map((hospital, index) => (
-          <HospitalCard key={hospital.id} hospital={hospital} rank={index} />
-        ))
+        <EmergencyTabs contacts={ranked} />
       )}
-
       {ranked.length > 0 && (
         <div style={{
           marginTop: '24px',
