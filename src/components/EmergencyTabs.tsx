@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import type { ScoredHospital } from '../utils/scoring'
+import type { ScoredHospital } from '../core/routing/scoring'
 
 interface Props {
   contacts: ScoredHospital[]

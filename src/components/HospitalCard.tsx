@@ -1,4 +1,4 @@
-import type { ScoredHospital } from '../utils/scoring'
+import type { ScoredHospital } from '../core/routing/scoring'
 
 interface Props {
   hospital: ScoredHospital

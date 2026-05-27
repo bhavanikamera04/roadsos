@@ -1,16 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.tsx'
-
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+import App from './App'
 import { Bystander } from './pages/Bystander'
 
-// Add route detection before rendering App
+// Render either the Bystander page or the main App depending on the path
 const isBystander = window.location.pathname === '/bystander'
 
 createRoot(document.getElementById('root')!).render(

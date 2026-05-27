@@ -35,7 +35,6 @@ export function useEmergency() {
     severity: string,
     topHospital: string,
     topHospitalPhone: string,
-    crashScore: number,
     incidentId: string
   ) => {
     setIsExecuting(true)

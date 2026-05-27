@@ -1,5 +1,4 @@
 import { supabase } from '../api/supabase'
-import type { User } from '@supabase/supabase-js'
 
 export type IncidentStatus = 'pending' | 'active' | 'resolved' | 'false_positive'
 

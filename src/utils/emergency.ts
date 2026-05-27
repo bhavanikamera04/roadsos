@@ -15,7 +15,7 @@ export interface EmergencyData {
 
 export interface ActionResult {
   action: string
-  status: 'fulfilled' | 'failed'
+  status: 'fulfilled' | 'rejected'
   detail: string
 }
 
@@ -104,7 +104,7 @@ export async function executeEmergencyResponse(
 
     results.push({
       action: actionName,
-      status: result.status === 'fulfilled' ? 'fulfilled' : 'failed',
+      status: result.status === 'fulfilled' ? 'fulfilled' : 'rejected',
       detail: result.status === 'fulfilled'
         ? result.value
         : String((result as PromiseRejectedResult).reason)

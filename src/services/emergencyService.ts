@@ -3,11 +3,9 @@ import type { EmergencyData, ActionResult } from '../utils/emergency'
 
 export const EmergencyService = {
   async executeResponse(data: EmergencyData, contacts: any[]): Promise<ActionResult[]> {
-    const results: ActionResult[] = []
-
     // 1. Notify Emergency Contacts via Backend
     // In a real world case, this would call a Supabase Edge Function that uses Twilio/Resend
-    const contactNotification = async () => {
+    const contactNotification = async (): Promise<ActionResult> => {
       try {
         // Simulate API call to Edge Function
         await supabase.functions.invoke('send-emergency-sms', {
@@ -20,7 +18,7 @@ export const EmergencyService = {
     }
 
     // 2. Notify Nearest Hospital
-    const hospitalNotification = async () => {
+    const hospitalNotification = async (): Promise<ActionResult> => {
       try {
         await supabase.functions.invoke('notify-hospital', {
           body: { hospital: data.topHospital, location: data.lat + ',' + data.lon }
@@ -32,7 +30,7 @@ export const EmergencyService = {
     }
 
     // 3. First Aid Logic (Local)
-    const firstAid = async () => {
+    const firstAid = async (): Promise<ActionResult> => {
       return {
         action: 'First Aid',
         status: 'fulfilled',

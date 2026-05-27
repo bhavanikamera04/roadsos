@@ -27,7 +27,7 @@ export function useIncident() {
           incident_id: incidentId,
           location: `${pos.coords.longitude} ${pos.coords.latitude}`,
           battery_level: (window as any).navigator.getBattery
-            ? await (window as any).navigator.getBattery().then(b => b.level * 100)
+            ? await (window as any).navigator.getBattery().then((b: { level: number }) => b.level * 100)
             : 100,
           network_strength: (navigator as any).connection?.effectiveType || 'unknown',
           sensor_confidence: 1.0 // Placeholder

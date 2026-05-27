@@ -26,12 +26,12 @@ function App() {
         'HIGH',
         top?.name || 'Nearest hospital',
         top?.phone || '108',
-        crashScore.total
+        crypto.randomUUID()
       )
     }
     window.addEventListener('roadsos:emergency', handleEmergency)
     return () => window.removeEventListener('roadsos:emergency', handleEmergency)
-  }, [ranked, userLocation, triggerEmergency, crashScore.total])
+  }, [ranked, userLocation, triggerEmergency])
 
   if (emergencyTriggered) {
     return (
