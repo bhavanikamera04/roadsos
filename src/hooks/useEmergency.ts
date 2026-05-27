@@ -1,9 +1,12 @@
 import { useState, useCallback, useEffect } from 'react'
-import { executeEmergencyResponse } from '../utils/emergency'
-import { logIncident, getContacts } from '../utils/storage'
+import { EmergencyService } from '../services/emergencyService'
+import { IncidentRepository } from '../repositories/incidentRepository'
+import { useAuth } from './useAuth'
+import { supabase } from '../api/supabase'
 import type { EmergencyContact, EmergencyData, ActionResult } from '../utils/emergency'
 
 export function useEmergency() {
+  const { user } = useAuth()
   const [actionResults, setActionResults] = useState<ActionResult[]>([])
   const [isExecuting, setIsExecuting] = useState(false)
   const [firstAidSteps, setFirstAidSteps] = useState<string[]>([])
@@ -11,14 +14,20 @@ export function useEmergency() {
   const [contacts, setContacts] = useState<EmergencyContact[]>([])
 
   useEffect(() => {
-    getContacts().then(stored => {
-      if (stored.length > 0) {
-        setContacts(stored)
-      } else {
-        setContacts([{ name: 'Family', phone: '9999999999', relationship: 'Family' }])
+    const fetchContacts = async () => {
+      if (!user) return
+      const { data, error } = await supabase.from('emergency_contacts')
+        .select('*')
+        .eq('user_id', user.id)
+
+      if (error) {
+        console.error('Fetch contacts error:', error)
+        return
       }
-    })
-  }, [])
+      setContacts(data || [])
+    }
+    fetchContacts()
+  }, [user])
 
   const triggerEmergency = useCallback(async (
     lat: number,
@@ -26,7 +35,8 @@ export function useEmergency() {
     severity: string,
     topHospital: string,
     topHospitalPhone: string,
-    crashScore: number
+    crashScore: number,
+    incidentId: string
   ) => {
     setIsExecuting(true)
     setEmergencyTriggered(true)
@@ -40,17 +50,24 @@ export function useEmergency() {
       timestamp: new Date().toLocaleTimeString('en-IN')
     }
 
-    await logIncident({ lat, lon, severity, topHospital, crashScore })
+    try {
+      // 1. Update incident to active in DB
+      await IncidentRepository.updateStatus(incidentId, 'active')
 
-    const results = await executeEmergencyResponse(data, contacts)
+      // 2. Execute real-world notifications via Service
+      const results = await EmergencyService.executeResponse(data, contacts)
 
-    const firstAidResult = results.find(r => r.action === 'First Aid')
-    if (firstAidResult?.status === 'fulfilled') {
-      setFirstAidSteps(firstAidResult.detail.split('\n'))
+      const firstAidResult = results.find(r => r.action === 'First Aid')
+      if (firstAidResult?.status === 'fulfilled') {
+        setFirstAidSteps(firstAidResult.detail.split('\\n'))
+      }
+
+      setActionResults(results)
+    } catch (err) {
+      console.error('Emergency execution failed:', err)
+    } finally {
+      setIsExecuting(false)
     }
-
-    setActionResults(results)
-    setIsExecuting(false)
   }, [contacts])
 
   const reset = useCallback(() => {
